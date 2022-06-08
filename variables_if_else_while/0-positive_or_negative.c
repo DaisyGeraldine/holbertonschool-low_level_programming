@@ -8,7 +8,7 @@
  *
  * Return: Always 0 (Success)
  */
-int main(void)  /* Most important part of the program!  */
+int main(void)
 {
 	int n;
 
