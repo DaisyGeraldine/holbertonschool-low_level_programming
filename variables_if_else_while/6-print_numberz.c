@@ -8,8 +8,8 @@
  * Return: Always 0 (Success)
  */
 int main(void)
-{unsigned char ch = '0';
-	while (ch <= '9')
+{int ch = 48;
+	while (ch <= 57)
 	{
 		putchar(ch);
 		ch++;
