@@ -1,18 +1,19 @@
 #include "main.h"
 /**
- * main - 1-alphabet.c
+ * print_alphabet - 'prints the alphabet'
  *
- * Description: 'Prints _putchar, followed by a new line'
+ * Description: 'the program's description'
  *
  * Return: Always 0 (Success)
  */
 void print_alphabet(void)
 {
-	int c;
+	int c = 97;
 
-	for (c = 97; c <= 122; c++)
+	while (c <= 122)
 	{
 		_putchar(c);
+		c++;
 	}
-	_putchar(10);
+	_putchar('\n');
 }
