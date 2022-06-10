@@ -12,12 +12,18 @@ void times_table(void)
 
 	while (c1 <= 9)
 	{
-		c2 = 0;
+		c2 = 1;
+		_putchar(48);
 		while (c2 <= 9)
 		{
 			r = c2 * c1;
 			d1 = r / 10;
 			d2 = r % 10;
+			if (c2 >= 0 && c2 < 10)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
 			if (r <= 9)
 			{
 				_putchar(32);
@@ -27,11 +33,6 @@ void times_table(void)
 			{
 				_putchar(d1 + 48);
 				_putchar(d2 + 48);
-			}
-			if (c2 != 9)
-			{
-				_putchar(',');
-				_putchar(' ');
 			}
 			c2++;
 		}
