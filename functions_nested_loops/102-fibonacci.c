@@ -12,9 +12,12 @@ int main(void)
 	for (cont = 1; cont <= 50; cont++)
 	{
 		z = x + y;
-		printf("%ld\n", z);
+		printf("%ld", z);
+		if (cont != 50)
+			printf(", ");
 		x = y;
 		y = z;
 	}
+	printf("\n");
 	return (0);
 }
