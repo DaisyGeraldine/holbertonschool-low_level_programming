@@ -31,7 +31,7 @@ void print_times_table(int n)
 					_putchar(32);
 					_putchar(32);
 				}
-				else if (r > 9 && r < 99)
+				else if (r > 9 && r <= 99)
 				{
 					_putchar(32);
 					_putchar(d2 + 48);
