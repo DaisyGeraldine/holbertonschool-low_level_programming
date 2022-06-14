@@ -12,18 +12,11 @@ void more_numbers(void)
 	{
 		for (j = 0; j <= 14; j++)
 		{
+			dig1 = j / 10;
+			dig2 = j % 10;
 			if (j >= 10)
-			{
-				dig1 = j / 10;
-				dig2 = j % 10;
 				_putchar(dig1 + 48);
-				_putchar(dig2 + 48);
-			}
-			else
-			{
-				_putchar(j + 48);
-			}
-
+			_putchar(dig2 + 48);
 		}
 		_putchar(10);
 	}
