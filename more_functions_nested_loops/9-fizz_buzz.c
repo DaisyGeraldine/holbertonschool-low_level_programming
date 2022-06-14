@@ -11,26 +11,24 @@ int main(void)
 
 	for (i = 1; i <= 100; i++)
 	{
-		if (i % 3 == 0 && i % 5 == 0)
+		if (i % 3 == 0 && i % 5 == 0) /*multiples of both three and five*/
 		{
 			printf("FizzBuzz");
-			printf(" ");
 		}
-		else if (i % 3 == 0)
+		else if (i % 3 == 0) /*multiples of three*/
 		{
 			printf("Fizz");
-			printf(" ");
 		}
-		else if (i % 5 == 0)
+		else if (i % 5 == 0) /*multiples of five*/
 		{
 			printf("Buzz");
-			printf(" ");
 		}
 		else
 		{
 			printf("%d", i);
-			printf(" ");
 		}
+		if (i != 100)
+			printf(" ");
 	}
 	printf("\n");
 	return (0);
