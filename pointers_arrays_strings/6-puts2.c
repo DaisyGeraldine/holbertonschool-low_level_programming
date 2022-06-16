@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * print_rev - task 04
- * @s : Variable char to validate
- * Description: function that prints a string, in reverse
+ * puts2 - task 06
+ * @str : Variable char to validate
+ * Description:  function that prints every other character of a string
  * Return: always
  */
 void puts2(char *str)
