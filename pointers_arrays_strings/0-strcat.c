@@ -28,5 +28,7 @@ char *_strcat(char *dest, char *src)
 		f++;
 	}
 	dest[k] = '\n';
+	k++;
+	dest[k] = '\0';
 	return (dest);
 }
