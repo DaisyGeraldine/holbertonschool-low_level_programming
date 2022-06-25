@@ -21,7 +21,7 @@ char *create_array(unsigned int size, char c)
 	}
 	else if (str == 0)
 	{
-		str == NULL;
+		str = NULL;
 	}
 	else
 	{
