@@ -16,21 +16,15 @@ char *_strdup(char *str)
 	{
 		cad = NULL;
 	}
-
-	if (cad == 0)
+	else
 	{
-		cad = NULL;
-	}
-
-	while (str[len] != '\0')
-	{
+		while (str[len] != '\0')
+		{
+			len++;
+		}
 		len++;
+		cad = malloc(len * sizeof(char));
 	}
-
-	len++;
-
-	cad = malloc(len * sizeof(char));
-
 	for (i = 0; i < len; i++)
 	{
 		cad[i] = str[i];
