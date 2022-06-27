@@ -26,7 +26,7 @@ char *_strdup(char *str)
 		cad = malloc(len * sizeof(char));
 	}
 
-	if (cad == 0)
+	if (cad == NULL)
 	{
 		cad = NULL;
 	}
