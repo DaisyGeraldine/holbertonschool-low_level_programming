@@ -25,6 +25,11 @@ char *_strdup(char *str)
 		len++;
 		cad = malloc(len * sizeof(char));
 	}
+
+	if (cad == 0)
+	{
+		cad = NULL;
+	}
 	for (i = 0; i < len; i++)
 	{
 		cad[i] = str[i];
