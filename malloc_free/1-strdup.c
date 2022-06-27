@@ -28,7 +28,7 @@ char *_strdup(char *str)
 
 	if (cad == NULL)
 	{
-		cad = NULL;
+		return (NULL);
 	}
 	for (i = 0; i < len; i++)
 	{
