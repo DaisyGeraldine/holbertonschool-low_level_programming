@@ -18,6 +18,9 @@ int **alloc_grid(int width, int height)
 	if (c <= 0 || r <= 0)
 		return (NULL);
 
+	if (ptr == NULL)
+		return (NULL);
+
 	for (i = 0; i < r; i++)
 	{
 		ptr[i] = (int *)malloc(c * sizeof(int));
@@ -31,8 +34,6 @@ int **alloc_grid(int width, int height)
 		}
 	}
 
-	if (ptr == NULL)
-		return (NULL);
 	for (r = 0; r < width; r++)
 		for (c = 0; c < height; c++)
 			ptr[c][r] = num;
