@@ -1,0 +1,23 @@
+#include <stdlib.h>
+#include "main.h"
+/**
+ * _calloc - task 02
+ * @nmemb : number elements
+ * @size : size bytes for type elements
+ * Description: function that allocates memory for an array, using malloc
+ * Return: always
+ */
+void *_calloc(unsigned int nmemb, unsigned int size)
+{
+	void *ptr;
+
+	ptr = malloc(nmemb * size);
+
+	if (ptr == NULL)
+		return (NULL);
+
+	if (nmemb == 0 || size == 0)
+		return (NULL);
+
+	return (ptr);
+}
