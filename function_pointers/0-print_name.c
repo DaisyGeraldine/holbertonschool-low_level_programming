@@ -1,0 +1,13 @@
+#include <stdlib.h>
+#include "function_pointers.h"
+/**
+ * print_name - task 00
+ * @name : name
+ * @f : function with parameter char *
+ * Description: function that prints a name
+ * Return: always
+ */
+void print_name(char *name, void (*f)(char *))
+{
+	f(name);
+}
