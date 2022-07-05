@@ -1,0 +1,16 @@
+CC = gcc #compiler
+SRC = main.c school.c #files .c
+OBJ = $(SRC:.c=.o) #file .o
+NAME = school #name executable
+RM = rm -f
+
+all : $(OBJ) m.h
+	$(CC) $(OBJ) -o $(NAME)
+clean :
+	$(RM) *~ $(NAME)
+oclean :
+	$(RM) $(OBJ)
+fclean :
+	$(clean) $(oclean)
+re :
+	$(all) $(clean) $(oclean) $(fclean)
