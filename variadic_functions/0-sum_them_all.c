@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 /**
- * print_name - task 00
+ * sum_them_all - task 00
  * @n : const number
  * Description: function that returns the sum of all its parameters
  * Return: always
