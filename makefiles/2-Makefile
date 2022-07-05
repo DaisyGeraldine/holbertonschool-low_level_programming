@@ -1,6 +1,6 @@
 CC = gcc #compiler
 SRC = main.c school.c #files .c
-OBJ = main.o school.o #file .o
+OBJ = $(SRC:.c=.o) #file .o
 NAME = school
 
 all : $(OBJ) m.h
