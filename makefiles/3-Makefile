@@ -1,7 +1,7 @@
 CC = gcc #compiler
 SRC = main.c school.c #files .c
 OBJ = $(SRC:.c=.o) #file .o
-NAME = school #name executable
+NAME = school
 RM = rm -f
 
 all : $(OBJ) m.h
