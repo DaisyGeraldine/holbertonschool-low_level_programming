@@ -6,8 +6,11 @@ RM = rm -f
 
 all : $(OBJ) m.h
 	$(CC) $(OBJ) -o $(NAME)
+
+.PHONY : $(clean) $(oclean) $(fclean)
+
 clean :
-	$(RM)
+	$(RM) *~ $(NAME)
 oclean :
 	$(RM) $(OBJ)
 fclean :
