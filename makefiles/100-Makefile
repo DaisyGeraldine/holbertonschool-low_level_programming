@@ -2,13 +2,13 @@ CC = gcc #compiler
 SRC = main.c school.c #files .c
 OBJ = $(SRC:.c=.o) #file .o
 NAME = school
-RM = rm -f
+#RM = rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
 all : $(OBJ) m.h
 	$(CC) $(OBJ) -o $(NAME)
 
-.PHONY : clean oclean fclean
+.PHONY : clean oclean fclean all
 
 clean :
 	$(RM) *~ $(NAME)
