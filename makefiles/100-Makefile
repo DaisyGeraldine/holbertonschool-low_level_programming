@@ -1,6 +1,6 @@
 CC = gcc #compiler
 SRC = main.c school.c #files .c
-OBJ = $(SRC:.c=.o) #file .o
+OBJ = $(SRC:.c=.o) #files .o
 NAME = school
 #RM = rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
