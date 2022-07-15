@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "lists.h"
 /**
- * print_len - task 01
+ * list_len - task 01
  * @h : pointer of struct list_t
  * Description: function that returns the number of elements in a
  * linked list_t list.
