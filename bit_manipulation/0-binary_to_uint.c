@@ -9,7 +9,8 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	int decimal_num = 0, rem = 0, base = 1, num = 0;
+	int decimal_num = 0, rem = 0, base = 1;
+	long int num = 0;
 	int i = 0;
 
 	if (b == NULL)
