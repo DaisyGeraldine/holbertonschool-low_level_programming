@@ -9,31 +9,20 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	int decimal_num = 0, rem = 0, base = 1;
-	long int num = 0;
-	int i = 0;
+	unsigned int val;
 
 	if (b == NULL)
 		return (0);
 
-	while (b[i] != '\0')
+	for (val = 0; *b; b++)
 	{
-		if (b[i] == '0' || b[i] == '1')
-			i++;
-
+		if (*b == '1')
+			val = (val << 1) | 1;
+		else if (*b == '0')
+			val = val << 1; /*val <<= 1;*/
 		else
-			return (0);
+		return (0);
 	}
 
-	num = atoi(b);
-
-	while (num > 0)
-	{
-		rem = num % 10;
-		decimal_num = decimal_num + rem * base;
-		num = num / 10;
-		base = base * 2;
-	}
-
-	return (decimal_num);
+	return (val);
 }
