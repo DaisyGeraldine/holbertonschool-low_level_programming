@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits.h>
 #include "main.h"
 /**
  * print_binary - task 01
@@ -9,7 +10,7 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned i, cont = 0;
+	unsigned long i, cont = 0;
 
 	if (n == 0)
 	{
@@ -17,7 +18,11 @@ void print_binary(unsigned long int n)
 		return;
 	}
 
-	for (i = 1 << 31; i > 0; i = i >> 1)
+	if (n > 4611686018427387904)
+		_putchar('1');
+
+	for (i = 4611686018427387904; i > 0; i = i >> 1)
+	{
 		if (n & i)
 		{
 			_putchar('1');
@@ -27,4 +32,5 @@ void print_binary(unsigned long int n)
 		{
 			_putchar('0');
 		}
+	}
 }
