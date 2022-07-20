@@ -19,7 +19,7 @@ int clear_bit(unsigned long int *n, unsigned int index)
 
 	*n = r;
 
-	if (!(n) || n == 0)
+	if (!(*n) || r == 0)
 		return (1);
 	else
 		return (-1);
