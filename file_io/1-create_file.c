@@ -16,7 +16,7 @@ int create_file(const char *filename, char *text_content)
 	int fd = 0;
 	ssize_t fdw;
 
-	if (filename == NULL || text_content == NULL)
+	if (filename == NULL)
 		return (-1);
     /* open a file for output              */
     /* replace existing file if it exists  */
