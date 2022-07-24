@@ -91,10 +91,13 @@ int messagges_Error(int codError, char *file, int filedes)
  * Description: close file
  * Return: void
  */
-void safe_close(int filedes)
+int safe_close(int filedes)
 {
-	if (filedes == -1)
+	int error;
+
+	error = close(filedes);
+	if (error == -1)
 		messagges_Error(100, NULL, filedes);
-	else
-		close(filedes);
+
+	return (error);
 }
