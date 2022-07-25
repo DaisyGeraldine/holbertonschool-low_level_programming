@@ -10,13 +10,11 @@
  * @av : "argument vector"
  * Description: Write a program that copies the
  * content of a file to another file.
- *
  * Return: always
  */
 int main(int ac, char **av)
 {
-	int fromfd = 0, tofd = 0, bytes_read = 0, _EOF = 1;
-	ssize_t fdw;
+	int fromfd = 0, tofd = 0, bytes_read = 0, _EOF = 1, fdw;
 	char buffer[1024];
 
 	if (ac != 3)
@@ -43,7 +41,6 @@ int main(int ac, char **av)
 		{
 			bytes_read += EOF;
 			fdw = write(tofd, buffer, _EOF);
-
 			if (fdw == -1)
 			{
 				safe_close(fromfd);
@@ -54,6 +51,8 @@ int main(int ac, char **av)
 		else if (_EOF == 0)
 			break;
 	}
+	safe_close(tofd);
+	safe_close(fromfd);
 	return (0);
 }
 
