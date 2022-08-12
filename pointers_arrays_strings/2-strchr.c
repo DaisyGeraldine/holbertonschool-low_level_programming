@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 /**
  * *_strchr - task 02
  * @s : string
@@ -14,6 +15,8 @@ char *_strchr(char *s, char c)
 		if (*s == c)
 			break;
 		s++;
+		if (*s == '\0')
+			return (NULL);
 	}
 
 	return (s);
