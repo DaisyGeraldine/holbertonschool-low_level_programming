@@ -23,9 +23,9 @@ char *argstostr(int ac, char **av)
 		len++;
 	}
 
-	str = malloc(len * sizeof(char));
+	str = malloc((len + 1) * sizeof(char));
 
-	i =0;
+	i = 0;
 	while (i < ac)
 	{
 		strcat(str, av[i]);
