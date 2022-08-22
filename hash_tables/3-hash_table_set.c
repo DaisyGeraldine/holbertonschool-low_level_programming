@@ -12,9 +12,9 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *hn_new = NULL, *hn_add = NULL;
 	unsigned int long index = 0;
 	char *dup_value = NULL;
+	hash_node_t *hn_new = NULL, *hn_add = NULL;
 
 	if (!ht || !key || strcmp(key, "") == 0 || !value)
 		return (0);
@@ -35,6 +35,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 				return (0);
 			}
 			hn_new->value = dup_value;
+			return (1);
 		}
 		hn_new = hn_new->next;
 	}
